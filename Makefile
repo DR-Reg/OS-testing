@@ -1,7 +1,7 @@
 SOURCE = src
 BUILD = build
 
-${BUILD}: ${SOURCE}
+${BUILD}: ${SOURCE}/*
 	nasm -fbin ${SOURCE}/main.nasm -o ${BUILD}/main.bin
 
 .PHONY: run
