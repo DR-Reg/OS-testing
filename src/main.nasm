@@ -1,5 +1,5 @@
 ; first sector:
-org 0x7c00
+org 0x7c00      ; bootloader is always loaded here
 
 ; video mode: large res text
 mov ah, 00h

@@ -6,7 +6,7 @@ ${BUILD}: ${SOURCE}/*
 
 .PHONY: run
 run: ${BUILD}
-	qemu-system-i386 -drive format=raw,file=${BUILD}/main.bin
+	qemu-system-x86_64 -drive format=raw,file=${BUILD}/main.bin
 .PHONY: run-slow
 run-slow: ${BUILD}
-	qemu-system-i386 -icount 10,align=on -drive format=raw,file=${BUILD}/main.bin
+	qemu-system-x86_64 -icount 10,align=on -drive format=raw,file=${BUILD}/main.bin
