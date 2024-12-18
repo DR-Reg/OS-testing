@@ -9,9 +9,10 @@ w, h = im.size
 curr_val = 0
 curr_val_count = 0
 byte_count = 0
+skips = 0
 out.write("logo_data: db")
 for row in range(h):
-    for col in range(w):
+    for col in range(0, w, (1+skips)):
         pix = im.getpixel((col, row))
         dbg.write("1" if pix[0] < 255 else "0")
         new_val = int(pix[0] < 255)
